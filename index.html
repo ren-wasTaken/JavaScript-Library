@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📕 My Library</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shippori+Antique+B1&display=swap');
+    </style> 
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <h1>📕 My Library</h1>
+        <div class="stats">
+            <p>Total Books: <label id="booksTotal"></label></p>
+            <p>Books to Read: <label id="booksToRead"></label></p>
+            <p>Books Finished: <label id="booksFinished"></label></p>
+        </div> 
+    </div>
+
+    <div class="main">
+        <div class="mainBtns">
+            <button id='openFormBtn' onclick="openForm()">+ Add Book</button>
+            <button id="deleteAllBtn" onclick="deleteAllBooks()">Delete All</button>
+        </div>
+        <div id="libraryGrid"></div>
+    </div>
+
+    <div id=modal> 
+        <form id="form" autocomplete="off" onsubmit="addBookToArray()"> <button class="close" onclick="closeForm()">&times</button>
+            <legend>New Book</legend>
+            <div id="formInput">
+                    <input type="text" id="title" name="title" placeholder="Title" minlength="1" maxlength="30" required/>
+                    <input type="text" id="author" name="author" placeholder="Author" minlength="1" maxlength="30" required/>
+                    <input type="number" id="pages" name="pages" placeholder="Pages" min="1" max="10000" maxlength="6" required/>
+            </div>
+            <div id="markIfRead">
+                <label for="status">Mark as read: </label><input type="checkbox" id="status">
+            </div>
+            <input type="submit" id='addLibrary' value="Add to Library">
+        </form>
+    </div>
+    <div id="overlay" onclick="closeForm()"></div>
+</body>
+</html>
