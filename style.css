@@ -165,7 +165,7 @@ button.close {
     border: 2px solid black;
     border-radius: 6px;
     background: linear-gradient(135deg, rgb(2, 225, 255) 0%, rgb(192, 58, 255) 100%);
-    width: fit-content;
+    width: 20rem;
     text-align: center;
 }
 
