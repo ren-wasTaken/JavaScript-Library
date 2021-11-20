@@ -83,16 +83,10 @@ function toggleStatus() {
   updateStats()
   // updateColor()
 }
+
 // function updateColor() {
-//   index=event.target.dataset.index
-//   console.log(index)
-//   book = document.querySelector()
-//   console.log(book)
-//   if (myLibrary[index].status == true) {
-//   book.classList.add('finishedCard')
-//   }else {book.remove('finishedCard')
-// }
-// }
+// TO ADD
+
 //Removes a Book from Library
 function deleteBook() {
   bookCard = event.target.dataset.index
